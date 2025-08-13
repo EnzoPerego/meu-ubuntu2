@@ -1,0 +1,15 @@
+name: Meu workflow Ubuntu 22.04
+
+on:
+  workflow_dispatch: # permite rodar manualmente
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v4
+
+      - name: Testar versão do Ubuntu
+        run: lsb_release -a
